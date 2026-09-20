@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Formato de imagem</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Formato de imagem</h1>
+  </header>
+
+  <main>
+    <section>
+      <p class="label">Baixar como</p>
+      <div class="seg" id="formats">
+        <button data-f="original">Original</button>
+        <button data-f="png">PNG</button>
+        <button data-f="jpg">JPG</button>
+        <button data-f="webp">WEBP</button>
+      </div>
+      <div id="qRow" class="quality" hidden>
+        <label for="q">Qualidade <b id="qv">92</b>%</label>
+        <input type="range" id="q" min="40" max="100" value="92">
+      </div>
+    </section>
+
+    <section>
+      <label class="check">
+        <input type="checkbox" id="force">
+        <span class="box"></span>
+        <span>Liberar o botão direito em imagens bloqueadas</span>
+      </label>
+    </section>
+
+    <section>
+      <div class="bar">
+        <p class="label">Imagens da página <b id="count">0</b></p>
+        <div class="tools">
+          <button id="all" class="sm">Todas</button>
+          <button id="none" class="sm">Nenhuma</button>
+        </div>
+      </div>
+      <div id="grid"></div>
+      <button id="download" class="big" disabled>Baixar (0)</button>
+      <p id="status" role="status"></p>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
